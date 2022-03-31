@@ -1,4 +1,4 @@
-'use strict';
+use strict';
 
 // brings in the assert module for unit testing
 const assert = require('assert');
@@ -12,10 +12,42 @@ const rl = readline.createInterface({
 
 
 const pigLatin = (word) => {
+  let aIdx = word.indexOf('a');
+  let eIdx = word.indexOf('e');
+  let iIdx = word.indexOf('i');
+  let oIdx = word.indexOf('o');
+  let uIdx = word.indexOf('u');
+  let answer = -1;
 
-  // Your code here
+  if (aIdx === answer) {}
+  else if (aIdx != answer && answer < aIdx) {answer = aIdx;}
 
+   if (eIdx === -1) {}
+  else if (answer != -1 && answer > eIdx) {answer = eIdx} 
+  else if (answer === -1 && answer < eIdx)
+  {answer = eIdx}
+
+  if (iIdx === -1) {}
+  else if (answer != -1 && answer > iIdx)
+  {answer = iIdx} 
+  else if (answer === -1 && answer < iIdx)
+  {answer = iIdx} 
+  
+  
+  if (oIdx === -1) {}
+  else if (answer != -1 && answer > oIdx) {answer = oIdx}
+  else if (answer === -1 && answer < oIdx)
+  {answer = oIdx}
+
+  if (uIdx === -1) {}
+  else if (answer != -1 && answer > uIdx) {answer = uIdx} 
+  else if (answer == -1 && answer < uIdx) {answer = uIdx}
+
+if (answer === 0) {return word + "yay"}
+  else if (answer != 0) {return word.slice(answer, word.length) + word.slice(0, answer) + "ay" }
 }
+
+// let word = "emission"
 
 // the first function called in the program to get an input from the user
 // to run the function use the command: node main.js
